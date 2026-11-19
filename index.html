@@ -77,7 +77,7 @@ h2 { margin: 0; font-size: 46px; line-height: 1.32; font-weight: 700; letter-spa
 /* 5-2 流程 */
 .flow { display: grid; gap: 22px; justify-items: center; }
 .flow .frame img { max-height: 500px; }
-.pipe { list-style: none; margin: 0; padding: 0; width: 1072px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
+.pipe { list-style: none; margin: 0; padding: 0; width: 1072px; display: grid; grid-template-columns: repeat(7, 1fr); gap: 18px; }
 .pipe li {
   position: relative; height: 136px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; padding-inline: 4px;
   text-align: center; font-size: 22px; line-height: 1.2; font-weight: 600;
@@ -85,9 +85,9 @@ h2 { margin: 0; font-size: 46px; line-height: 1.32; font-weight: 700; letter-spa
   opacity: 0; transform: translateY(10px);
   transition: opacity .35s var(--ease), transform .35s var(--ease);
 }
-.pipe li b { font-family: var(--mono); font-size: 19px; color: var(--accent); }
-.pipe li small { font-size: 17px; font-weight: 500; color: var(--muted); line-height: 1.3; }
-.pipe li:not(:last-child)::after { content: "›"; position: absolute; right: -20px; top: 50%; transform: translateY(-54%); font: 600 30px/1 var(--sans); color: var(--accent); }
+.pipe li b { font-family: var(--mono); font-size: 16px; color: var(--accent); }
+.pipe li small { font-size: 15px; font-weight: 500; color: var(--muted); line-height: 1.3; }
+.pipe li:not(:last-child)::after { content: "›"; position: absolute; right: -16px; top: 50%; transform: translateY(-54%); font: 600 30px/1 var(--sans); color: var(--accent); }
 .on .pipe li { opacity: 1; transform: none; transition-delay: calc(var(--i) * 130ms + 150ms); }
 
 /* 5-4 踩坑記錄 */
@@ -282,11 +282,12 @@ h2 { margin: 0; font-size: 46px; line-height: 1.32; font-weight: 700; letter-spa
       <div class="flow fx" data-on="2">
         <ol class="pipe">
           <li style="--i:0"><b>/grill-<br>with&#8209;docs</b><small>需求訪談，<br>產生文件<br>(ADR、Domain)</small></li>
-          <li style="--i:1"><b>/to-spec</b><small>需求文件</small></li>
-          <li style="--i:2"><b>/to-tickets</b><small>切成 GitHub Issue</small></li>
-          <li style="--i:3"><b>/implement</b><small>實作代碼<br>提 GitHub PR</small></li>
-          <li style="--i:4"><b>/code-review</b></li>
-          <li style="--i:5">test / merge</li>
+          <li style="--i:1"><b>/prototype</b></li>
+          <li style="--i:2"><b>/to-spec</b><small>需求文件</small></li>
+          <li style="--i:3"><b>/to-tickets</b><small>切成<br>GitHub Issue</small></li>
+          <li style="--i:4"><b>/implement</b><small>實作代碼<br>提 GitHub PR</small></li>
+          <li style="--i:5"><b>/code-review</b></li>
+          <li style="--i:6">test /<br>merge</li>
         </ol>
         <figure class="frame" style="margin:0">
           <img src="photos/5-2.png" alt="GitHub 上已合併的 Pull Request 清單">
